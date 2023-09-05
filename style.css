@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes kf-horizontal-scroll-1 {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes kf-horizontal-scroll-2 {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+
+.horizontal-scroll {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: unset;
+}
+
+
+.horizontal-scroll div:nth-child(odd) {
+    animation: kf-horizontal-scroll-1 10s linear -5s infinite both;
+    width: 100vw;
+    min-width: 100vw;
+}
+
+.horizontal-scroll div:nth-child(even) {
+    animation: kf-horizontal-scroll-2 10s linear 0s infinite both;
+    width: 100vw;
+    min-width: 100vw;
+
+}
+
+img {
+    width: 100%;
+}
