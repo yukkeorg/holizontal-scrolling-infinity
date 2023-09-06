@@ -4,6 +4,7 @@
     margin: 0;
 }
 
+
 @keyframes kf-horizontal-scroll-1 {
     from {
         transform: translateX(100%);
@@ -31,17 +32,16 @@
 }
 
 
-.horizontal-scroll div:nth-child(odd) {
-    animation: kf-horizontal-scroll-1 10s linear -5s infinite both;
-    width: 100vw;
+.horizontal-scroll div#A { /* 1, 3, 5,... 番目 */
+    animation: kf-horizontal-scroll-1 20s linear 0s infinite both;
     min-width: 100vw;
+    border: 2px solid red;
 }
 
-.horizontal-scroll div:nth-child(even) {
-    animation: kf-horizontal-scroll-2 10s linear 0s infinite both;
-    width: 100vw;
+.horizontal-scroll div#B {
+    animation: kf-horizontal-scroll-2 20s linear -5s infinite both;
     min-width: 100vw;
-
+    border: 2px solid blue;
 }
 
 img {
